@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+:root {
+    --editor-bg: #222;
+    --editor-border: rgb(121, 187, 187);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.editor {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor__wrapper {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background: var(--editor-bg);
+    padding: 2em;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.editor__body {
+    flex: 1;
+    font-family: Inconsolata, sans-serif;
+    color: #ccc;
+}
+
+.editor__footer {
+    display: flex;
+}
+
+.editor__footer--left {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor__footer--right {
+    flex: 1;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.editor__btn {
+    border: 0;
+    padding: .5em;
+    background-color: #fff;
+    border: 2px solid #333;
+    margin-top: 1em;
+    width: 100px;
+    cursor: pointer;
+}
+
+.editor__console {
+    color: #fff;
+    background-color: #333;
+    width: 100%;
+    height: 130px;
+    margin-top: .9em;
+    border: 3px solid var(--editor-border);
+    overflow: auto;
+}
+
+.editor__code {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--editor-border);
+}
+
+/* Editor Console Logs */
+
+.editor__console-logs {
+    padding: 10px;
+    list-style: none;
+}
+
+.editor__console-logs li pre {
+    font-size: .9em;
+    font-family: Inconsolata, sans-serif;
+}
+
+.ace_gutter {
+    border-left: 5px solid var(--editor-border)
+}
+
+.log--default {
+    color: #eee;
+}
+
+.log--string {
+    color: #48BF0A;
+}
+
+.log--number {
+    color: #7338ff;
+}
+
+.log--boolean {
+    color: #7338ff;
+}
+
+.log--undefined {
+    color: grey;
+}
+
+.log--error {
+    color: #e22020
+}
+
+.log--object {
+    color: darkcyan;
+}
+
+.log--array {
+    color: #898bff;
+}
+
+.log--function {
+    color: #ebeb2a;
+}
+
